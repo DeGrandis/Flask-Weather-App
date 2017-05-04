@@ -1,0 +1,36 @@
+<!doctype html>
+<head>
+    <title>{{ location['city'] }}: Weather</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/index.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+</head>
+
+
+<body id="container">
+    <h1 id="main">It is currently {{ temperature }} degrees in {{ location['city'] }}.</h1>
+</body>
+
+<script>
+    var myElement = document.querySelector("#container");
+    
+    var degrees = {{ temperature }};
+        
+    if (degrees < 60) {
+        myElement.style.animation = "cold";
+    } else if (degrees >= 60 && degrees < 70) {
+        myElement.style.animation = "mild";
+    } else if (degrees >= 70 && degrees < 75) {
+        myElement.style.animation = "warm";
+    } else {
+        myElement.style.animation = "hot";        
+    }
+    
+    myElement.style.animationDelay = "2s";
+    myElement.style.animationFillMode = "forwards"
+    myElement.style.animationDuration = "3s";
+
+</script>
+
+
+ 
+

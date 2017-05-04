@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    background-color: #F2F4F3;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+#main {
+    color: #2D2D2D;
+    position: absolute;
+    left: 50%;
+    opacity: 0;
+    top: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    animation-name: slideUp;
+    animation-delay: .2s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    
+}
+#conatiner {
+    animation-delay: .2s;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+
+/* Standard syntax */
+@keyframes slideUp {
+    from {top: 40%; opacity: 0;}
+    to {top: 30%; opacity: 1;}
+}
+
+@keyframes cold {
+    from {background-color: background-color: #F2F4F3;}
+    to {background-color: #72A1E5;}
+}
+
+@keyframes mild {
+    from {background-color: background-color: #F2F4F3;}
+    to {background-color: #A7D3A6;}
+}
+
+@keyframes warm {
+    from {background-color: background-color: #F2F4F3;}
+    to {background-color: #F7EF81;}
+}
+
+@keyframes hot {
+    from {background-color: background-color: #F2F4F3;}
+    to {background-color: #D52941;}
+}
+
+@keyframes darkToLight {
+    from {color: #2D2D2D}
+    to {color: white}
+}
+
+
+
